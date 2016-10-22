@@ -1,9 +1,10 @@
 package main
 
-import (
-	"net/http"
-)
-
 func main() {
 
+	nginxLog := &TargetFile{
+		FilePath: "/var/log/nginx/access.log",
+		Follow: true,
+	}
+	nginxLog.Tail()
 }
